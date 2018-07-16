@@ -8,15 +8,16 @@ function initMap() {
         },
         zoom: 8
     });
-    /*
-                    var marker = new google.maps.Marker({
-                        position: {
-                            lat: -33.918861,
-                            lng: 18.423300
-                        }
-                    });*/
-    var kml = new google.maps.KmlLayer({
-        url: 'https://busisile-zilwa2601.github.io/Hackathon/Prototype/',
-        map: map
+
+    var marker = new google.maps.Marker({
+        position: {
+            lat: -33.918861,
+            lng: 18.423300
+        }
     });
+    var kmllayer = new google.maps.KmlLayer(
+        "https://census2011.adrianfrith.com/place/199/kml", {
+            map: map,
+            clickable: false
+        });
 }
